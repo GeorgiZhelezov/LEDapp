@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">LED</string>
+    <string name="tab_text_1">Com</string>
+    <string name="tab_text_2">Modes</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="toggle_led">Toggle LED</string>
+    <string name="rx">RX:</string>
+    <string name="read_buffer"><![CDATA[<Read Buffer>]]></string>
+    <string name="bluetooth_status"><![CDATA[<Bluetooth Status>]]></string>
+    <string name="status">Status:</string>
+    <string name="bluetooth_on">Bluetooth ON</string>
+    <string name="bluetooth_off">Bluetooth OFF</string>
+    <string name="show_paired_devices">Show paired Devices</string>
+    <string name="discover_new_devices">Discover New Devices</string>
+
+    <string name="button">Button</string>
+    <string name="button1">Message</string>
+    <string name="colorPickerText">SAMO FTK</string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="alpha">Alpha</string>
+    <string name="set_color">SET COLOR</string>
+    <string name="btn_sendData">SEND DATA</string>
+    <string name="btn_start_connection">START CONNECTION</string>
+    <string name="paired_devices">Paired Devices</string>
+    <string name="select_a_pairing_device">Select A Pairing Device</string>
+    <string name="pair">Pair</string>
+</resources>

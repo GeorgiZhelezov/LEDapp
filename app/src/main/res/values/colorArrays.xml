@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="colors">
+        <item>#FF0000</item> //255 0 0
+        <item>#FF4000</item> //255 64 0
+        <item>#FF8000</item> //255 128 0
+        <item>#FFFF00</item> //255 255 0
+        <item>#80FF00</item> //128 255 0
+        <item>#40FF00</item> //64 255 0
+        <item>#00FF00</item> //0 255 0
+        <item>#00FF40</item> //0 255 64
+        <item>#00FF80</item> //0 255 128
+        <item>#00FFFF</item> //0 255 255
+        <item>#0080FF</item> //0 128 255
+        <item>#0040FF</item> //0 64 255
+        <item>#0000FF</item> //0 0 255
+        <item>#4000FF</item> //64 0 255
+        <item>#8000FF</item> //128 0 255
+        <item>#ff00ff</item> //255 0 255
+    </array>
+</resources>
