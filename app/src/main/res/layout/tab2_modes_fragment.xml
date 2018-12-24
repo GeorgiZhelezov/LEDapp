@@ -1,133 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_modes_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/layout_modes_fragment"
+    android:orientation="vertical"
     android:tag="TAG_modes">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/button_sendData"
+        app:layout_constraintTop_toTopOf="@id/layout_modes_fragment">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/layout_colorPicker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="0dp">
-
-            <com.rtugeek.android.colorseekbar.ColorSeekBar
-                android:id="@+id/colorPickerBar"
-                app:barHeight="25dp"
-                app:colorSeeds="@array/colors"
-                app:showAlphaBar="true"
+            <LinearLayout
+                android:id="@+id/layout_colorPicker"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="0dp">
+
+                <com.rtugeek.android.colorseekbar.ColorSeekBar
+                    android:id="@+id/colorPickerBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:barHeight="25dp"
+                    app:colorSeeds="@array/colors"
+                    app:showAlphaBar="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_textRGBA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/layout_colorPicker">
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/red"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/green"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/blue"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/alpha"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_boxRGBA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/layout_textRGBA">
+
+                <EditText
+                    android:id="@+id/text_box_r"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/red"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/text_box_g"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/green"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/text_box_b"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/blue"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/text_box_alpha"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/alpha"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_setColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/set_color"
+                app:layout_constraintTop_toBottomOf="@+id/layout_boxRGBA" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/modes" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="96dp"
+                    android:text="@string/mode1"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="96dp"
+                    android:text="@string/mode1"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.constraint.ConstraintLayout>
+
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/layout_textRGBA"
-            app:layout_constraintTop_toBottomOf="@+id/layout_colorPicker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    </ScrollView>
 
-            <TextView
-                android:layout_width="64dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/red"
-                android:textSize="12sp"
-                android:textAlignment="center"/>
+    <Button
+        android:id="@+id/button_sendData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="@string/btn_sendData"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
-            <TextView
-                android:layout_width="64dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/green"
-                android:textSize="12sp"
-                android:textAlignment="center" />
-
-            <TextView
-                android:layout_width="64dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/blue"
-                android:textSize="12sp"
-                android:textAlignment="center" />
-
-            <TextView
-                android:layout_width="64dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/alpha"
-                android:textSize="12sp"
-                android:textAlignment="center" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_boxRGBA"
-            app:layout_constraintTop_toBottomOf="@+id/layout_textRGBA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/text_box_r"
-                android:layout_width="64dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="@string/red"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/text_box_g"
-                android:layout_width="64dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="@string/green"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/text_box_b"
-                android:layout_width="64dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="@string/blue"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/text_box_alpha"
-                android:layout_width="64dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="@string/alpha"
-                android:inputType="number" />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/button_setColor"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layout_boxRGBA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/set_color" />
-
-        <Button
-            android:id="@+id/button_sendData"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_sendData" />
-
-    </LinearLayout>
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

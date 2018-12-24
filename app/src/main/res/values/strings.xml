@@ -28,4 +28,6 @@
     <string name="paired_devices">Paired Devices</string>
     <string name="select_a_pairing_device">Select A Pairing Device</string>
     <string name="pair">Pair</string>
+    <string name="modes">Modes:</string>
+    <string name="mode1">Mode1</string>
 </resources>
