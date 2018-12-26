@@ -17,7 +17,6 @@
 
     <string name="button">Button</string>
     <string name="button1">Message</string>
-    <string name="colorPickerText">SAMO FTK</string>
     <string name="red">Red</string>
     <string name="green">Green</string>
     <string name="blue">Blue</string>
@@ -30,4 +29,11 @@
     <string name="pair">Pair</string>
     <string name="modes">Modes:</string>
     <string name="mode1">Mode1</string>
+    <string name="mode2">Mode2</string>
+    <string name="mode3">Mode3</string>
+    <string name="mode4">Mode4</string>
+    <string name="mode5">Mode5</string>
+    <string name="mode6">Mode6</string>
+    <string name="mode7">Mode7</string>
+    <string name="mode8">Mode8</string>
 </resources>

@@ -21,6 +21,8 @@ import java.util.Locale;
 public class tab2MODESfragment extends Fragment {
     private static final String TAG = "tab2MODESfragment";
 
+    private String stringData;
+    private int mode;
 
     private EditText redBox;
     private EditText greenBox;
@@ -31,6 +33,14 @@ public class tab2MODESfragment extends Fragment {
 
     private Button sendDataButton;
     private Button setColorButton;
+    private Button mode1Button;
+    private Button mode2Button;
+    private Button mode3Button;
+    private Button mode4Button;
+    private Button mode5Button;
+    private Button mode6Button;
+    private Button mode7Button;
+    private Button mode8Button;
 
     int valRed;
     int valGreen;
@@ -50,6 +60,15 @@ public class tab2MODESfragment extends Fragment {
 
         setColorButton = (Button) view.findViewById(R.id.button_setColor);
         sendDataButton = (Button) view.findViewById(R.id.button_sendData);
+
+        mode1Button = (Button) view.findViewById(R.id.button_mode1);
+        mode2Button = (Button) view.findViewById(R.id.button_mode2);
+        mode3Button = (Button) view.findViewById(R.id.button_mode3);
+        mode4Button = (Button) view.findViewById(R.id.button_mode4);
+        mode5Button = (Button) view.findViewById(R.id.button_mode5);
+        mode6Button = (Button) view.findViewById(R.id.button_mode6);
+        mode7Button = (Button) view.findViewById(R.id.button_mode7);
+        mode8Button = (Button) view.findViewById(R.id.button_mode8);
 
         colorSeekBar = (ColorSeekBar) view.findViewById(R.id.colorPickerBar);
 
@@ -98,11 +117,79 @@ public class tab2MODESfragment extends Fragment {
             }
         });
 
+        mode1Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 1;
+            }
+        });
+        mode1Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 1;
+            }
+        });
+        mode1Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 1;
+            }
+        });
+        mode2Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 2;
+            }
+        });
+        mode2Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 2;
+            }
+        });
+        mode3Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 3;
+            }
+        });
+        mode4Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 4;
+            }
+        });
+        mode5Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 5;
+            }
+        });
+        mode6Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 6;
+            }
+        });
+        mode7Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 7;
+            }
+        });
+        mode8Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 8;
+            }
+        });
+
         sendDataButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(requireContext(), Integer.toString(valColor), Toast.LENGTH_LONG).show();
-                EventBus.getDefault().post(new notifyEvent(Integer.toString(valColor)));
+                stringData = "[" + Integer.toString(mode) + "]" + Integer.toString(valColor);
+                Toast.makeText(requireContext(), stringData, Toast.LENGTH_LONG).show();
+                EventBus.getDefault().post(new notifyEvent(stringData));
             }
         });
 

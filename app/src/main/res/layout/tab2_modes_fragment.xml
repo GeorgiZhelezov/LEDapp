@@ -129,7 +129,7 @@
                 android:text="@string/set_color"
                 app:layout_constraintTop_toBottomOf="@+id/layout_boxRGBA" />
 
-            <android.support.constraint.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -139,49 +139,77 @@
                     android:layout_height="wrap_content"
                     android:text="@string/modes" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="96dp"
-                    android:text="@string/mode1"/>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="96dp"
-                    android:text="@string/mode1"/>
-
-                <Button
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                <Button
+                    <Button
+                        android:id="@+id/button_mode1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="96dp"
+                        android:layout_weight="1"
+                        android:text="@string/mode1" />
+
+                    <Button
+                        android:id="@+id/button_mode2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="96dp"
+                        android:layout_weight="1"
+                        android:text="@string/mode2" />
+
+                    <Button
+                        android:id="@+id/button_mode3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="96dp"
+                        android:layout_weight="1"
+                        android:text="@string/mode3" />
+
+                    <Button
+                        android:id="@+id/button_mode4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="96dp"
+                        android:layout_weight="1"
+                        android:text="@string/mode4" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/button_mode5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="96dp"
+                        android:layout_weight="1"
+                        android:text="@string/mode5" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/button_mode6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="96dp"
+                        android:layout_weight="1"
+                        android:text="@string/mode6" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/button_mode7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="96dp"
+                        android:layout_weight="1"
+                        android:text="@string/mode7" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    <Button
+                        android:id="@+id/button_mode8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="96dp"
+                        android:layout_weight="1"
+                        android:text="@string/mode8" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                </LinearLayout>
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
 
         </LinearLayout>
 
