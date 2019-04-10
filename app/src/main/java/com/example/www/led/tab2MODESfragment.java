@@ -22,7 +22,7 @@ public class tab2MODESfragment extends Fragment {
     private static final String TAG = "tab2MODESfragment";
 
     private String stringData;
-    private int mode;
+    private int mode = 1;
 
     private EditText redBox;
     private EditText greenBox;
@@ -41,6 +41,10 @@ public class tab2MODESfragment extends Fragment {
     private Button mode6Button;
     private Button mode7Button;
     private Button mode8Button;
+    private Button mode9Button;
+    private Button mode10Button;
+    private Button mode11Button;
+    private Button mode12Button;
 
     int valRed;
     int valGreen;
@@ -53,24 +57,35 @@ public class tab2MODESfragment extends Fragment {
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab2_modes_fragment, container, false);
 
-        redBox = (EditText) view.findViewById(R.id.text_box_r);
-        greenBox = (EditText) view.findViewById(R.id.text_box_g);
-        blueBox = (EditText) view.findViewById(R.id.text_box_b);
-        alphaBox = (EditText) view.findViewById(R.id.text_box_alpha);
+        redBox = view.findViewById(R.id.text_box_r);
+        greenBox = view.findViewById(R.id.text_box_g);
+        blueBox = view.findViewById(R.id.text_box_b);
+        alphaBox = view.findViewById(R.id.text_box_alpha);
+        redBox.setEnabled(false);
+        greenBox.setEnabled(false);
+        blueBox.setEnabled(false);
+        alphaBox.setEnabled(false);
 
-        setColorButton = (Button) view.findViewById(R.id.button_setColor);
-        sendDataButton = (Button) view.findViewById(R.id.button_sendData);
 
-        mode1Button = (Button) view.findViewById(R.id.button_mode1);
-        mode2Button = (Button) view.findViewById(R.id.button_mode2);
-        mode3Button = (Button) view.findViewById(R.id.button_mode3);
-        mode4Button = (Button) view.findViewById(R.id.button_mode4);
-        mode5Button = (Button) view.findViewById(R.id.button_mode5);
-        mode6Button = (Button) view.findViewById(R.id.button_mode6);
-        mode7Button = (Button) view.findViewById(R.id.button_mode7);
-        mode8Button = (Button) view.findViewById(R.id.button_mode8);
 
-        colorSeekBar = (ColorSeekBar) view.findViewById(R.id.colorPickerBar);
+        setColorButton = view.findViewById(R.id.button_setColor);
+        sendDataButton = view.findViewById(R.id.button_sendData);
+
+        mode1Button = view.findViewById(R.id.button_mode1);
+        mode2Button = view.findViewById(R.id.button_mode2);
+        mode3Button = view.findViewById(R.id.button_mode3);
+        mode4Button = view.findViewById(R.id.button_mode4);
+        mode5Button = view.findViewById(R.id.button_mode5);
+        mode6Button = view.findViewById(R.id.button_mode6);
+        mode7Button = view.findViewById(R.id.button_mode7);
+        mode8Button = view.findViewById(R.id.button_mode8);
+        mode9Button = view.findViewById(R.id.button_mode9);
+        mode10Button = view.findViewById(R.id.button_mode10);
+        mode11Button = view.findViewById(R.id.button_mode11);
+        mode12Button = view.findViewById(R.id.button_mode12);
+
+
+        colorSeekBar = view.findViewById(R.id.colorPickerBar);
 
         colorSeekBar.setOnColorChangeListener(new ColorSeekBar.OnColorChangeListener() {
             @Override
@@ -123,24 +138,6 @@ public class tab2MODESfragment extends Fragment {
                 mode = 1;
             }
         });
-        mode1Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mode = 1;
-            }
-        });
-        mode1Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mode = 1;
-            }
-        });
-        mode2Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mode = 2;
-            }
-        });
         mode2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -183,11 +180,35 @@ public class tab2MODESfragment extends Fragment {
                 mode = 8;
             }
         });
+        mode9Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 9;
+            }
+        });
+        mode10Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 10;
+            }
+        });
+        mode11Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 11;
+            }
+        });
+        mode12Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mode = 12;
+            }
+        });
 
         sendDataButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                stringData = "[" + Integer.toString(mode) + "]" + Integer.toString(valColor);
+                stringData = "[" + Integer.toString(mode) + "]" + "{" + Integer.toString(valColor) + "}";
                 Toast.makeText(requireContext(), stringData, Toast.LENGTH_LONG).show();
                 EventBus.getDefault().post(new notifyEvent(stringData));
             }

@@ -36,4 +36,8 @@
     <string name="mode6">Mode6</string>
     <string name="mode7">Mode7</string>
     <string name="mode8">Mode8</string>
+    <string name="mode12">Mode12</string>
+    <string name="mode11">Mode11</string>
+    <string name="mode10">Mode10</string>
+    <string name="mode9">Mode9</string>
 </resources>
