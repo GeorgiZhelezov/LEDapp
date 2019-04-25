@@ -58,7 +58,6 @@ public class tab1COMfragment extends Fragment {
 
     private static final UUID BTMODULEUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"); // "random" unique identifier
 
-
     // #defines for identifying shared types between calling functions
     private final static int REQUEST_ENABLE_BT = 1; // used to identify adding bluetooth names
     private final static int MESSAGE_READ = 2; // used in bluetooth handler to identify message update
@@ -124,10 +123,11 @@ public class tab1COMfragment extends Fragment {
         mHandler = new Handler() {
             public void handleMessage(android.os.Message msg) {
                 if (msg.what == CONNECTING_STATUS) {
-                    if (msg.arg1 == 1)
+                    if (msg.arg1 == 1) {
                         mBluetoothStatus.setText("Connected to Device: " + (String) (msg.obj));
-                    else
+                    } else {
                         mBluetoothStatus.setText("Connection Failed");
+                    }
                 }
             }
         };
@@ -237,7 +237,7 @@ public class tab1COMfragment extends Fragment {
         mPairedDevices = mBTAdapter.getBondedDevices();
         if (mBTAdapter.isEnabled()) {
             // put it's one to the adapter
-            mBTArrayAdapter.clear();
+            mBTArrayAdapter.clear(); //clear device list before refreshing it
             for (BluetoothDevice device : mPairedDevices)
                 mBTArrayAdapter.add(device.getName() + "\n" + device.getAddress());
 
@@ -343,7 +343,6 @@ public class tab1COMfragment extends Fragment {
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
-
                     break;
                 }
             }

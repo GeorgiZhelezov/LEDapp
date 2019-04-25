@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/layout_com_fragment"
-    android:tag="TAG_com">
+    android:tag="TAG_com"
+    android:background="@color/colorDarkGray">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -21,13 +22,14 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="@string/status"
+                android:textColor="@color/colorLightGray"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/bluetoothStatus"
                 android:layout_width="wrap_content"
+                android:textColor="@color/colorLightGray"
                 android:layout_height="wrap_content"
-
                 android:layout_weight="0.9"
                 android:ellipsize="end"
                 android:maxLines="1"
@@ -48,6 +50,7 @@
 
             <Button
                 android:id="@+id/scan"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -55,6 +58,7 @@
 
             <Button
                 android:id="@+id/off"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -68,6 +72,7 @@
 
             <Button
                 android:id="@+id/PairedBtn"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -75,6 +80,7 @@
 
             <Button
                 android:id="@+id/discover"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
